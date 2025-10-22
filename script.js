@@ -114,27 +114,26 @@ if (heroVideo) {
 }
 
 // ==========================================
-// CONTACT FORM - SEND VIA GMAIL WEB
+// CONTACT FORM - SEND TO GMAIL
 // ==========================================
 function sendToEmail(event) {
     event.preventDefault();
     
     // Lấy thông tin từ form
     const name = document.getElementById('userName').value;
-    const email = document.getElementById('userEmail').value;
     const phone = document.getElementById('userPhone').value;
     const message = document.getElementById('userMessage').value;
     
-    // Tạo nội dung email
+    // Tạo subject và body
     const subject = encodeURIComponent('Đăng ký tập luyện - ' + name);
     const body = encodeURIComponent(
-        'Họ và tên: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Số điện thoại: ' + phone + '\n' +
-        'Mục tiêu: ' + message
+        'THÔNG TIN ĐĂNG KÝ\n\n' +
+        '👤 Họ và tên: ' + name + '\n' +
+        '📞 Số điện thoại: ' + phone + '\n' +
+        '🎯 Mục tiêu: ' + message
     );
     
-    // Gmail web compose URL
+    // Gmail compose URL
     const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=minhtanfitx@gmail.com&su=' + subject + '&body=' + body;
     
     // Show success message
@@ -142,7 +141,7 @@ function sendToEmail(event) {
     successMessage.textContent = '✅ Đang chuyển đến Gmail...';
     successMessage.classList.add('show');
     
-    // Mở Gmail web
+    // Mở Gmail
     setTimeout(function() {
         window.open(gmailUrl, '_blank');
         successMessage.classList.remove('show');
