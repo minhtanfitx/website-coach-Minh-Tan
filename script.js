@@ -114,40 +114,41 @@ if (heroVideo) {
 }
 
 // ==========================================
-// CONTACT FORM SUBMISSION
+// CONTACT FORM - SEND TO EMAIL
 // ==========================================
-    function sendToMessenger(event) {
-        event.preventDefault();
-        
-        const FACEBOOK_PAGE_USERNAME = 'minhtanfitx'; // ✅ Đúng
-        
-        // Lấy thông tin từ form
-        const name = document.getElementById('userName').value;
-        const email = document.getElementById('userEmail').value;
-        const phone = document.getElementById('userPhone').value;
-        const message = document.getElementById('userMessage').value;
-        
-        // Tạo tin nhắn tự động
-        const autoMessage = `Xin chào! 
-            Tên: ${name}
-            Email: ${email}
-            SĐT: ${phone}
-            Mục tiêu: ${message}`;
-        
-        const encodedMessage = encodeURIComponent(autoMessage);
-        const messengerURL = `http://m.me/${FACEBOOK_PAGE_USERNAME}?text=${encodedMessage}`;
-        
-        // Show success message
-        const successMessage = document.getElementById('successMessage');
-        successMessage.textContent = '✅ Đang chuyển đến Messenger...';
-        successMessage.classList.add('show');
-        
-        // Chuyển đến Messenger
-        setTimeout(function() {
-            window.open(messengerURL, '_blank');
-            successMessage.classList.remove('show');
-            document.getElementById('contactForm').reset();
-        }, 1000);
+function sendToEmail(event) {
+    event.preventDefault();
+    
+    // Lấy thông tin từ form
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const phone = document.getElementById('userPhone').value;
+    const message = document.getElementById('userMessage').value;
+    
+    // Tạo nội dung email
+    const subject = encodeURIComponent('Đăng ký tập luyện - ' + name);
+    const body = encodeURIComponent(
+        'Họ và tên: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Số điện thoại: ' + phone + '\n' +
+        'Mục tiêu: ' + message
+    );
+    
+    // Tạo mailto link
+    const mailtoLink = 'mailto:minhtanfitx@gmail.com?subject=' + subject + '&body=' + body;
+    
+    // Show success message
+    const successMessage = document.getElementById('successMessage');
+    successMessage.textContent = '✅ Đang mở ứng dụng email...';
+    successMessage.classList.add('show');
+    
+    // Mở email client
+    setTimeout(function() {
+        window.location.href = mailtoLink;
+        successMessage.classList.remove('show');
+        // Reset form
+        document.getElementById('contactForm').reset();
+    }, 500);
 }
 
 // ==========================================
