@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Huấn luyện viên Fitness chuyên nghiệp - Giúp bạn đạt mục tiêu cơ thể mơ ước">
+    <title>MINH TẤN FITX - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-left">
+            <img src="assets/logo.png" alt="Logo" class="logo-image">
+            <div class="logo-text">MINH TẤN</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">TRANG CHỦ</a></li>
+            <li><a href="#about">GIỚI THIỆU</a></li>
+            <li><a href="#services">DỊCH VỤ</a></li>
+            <li><a href="#testimonials">ĐÁNH GIÁ</a></li>
+            <li><a href="#contact">LIÊN HỆ</a></li>
+        </ul>
+        <div class="header-cta">
+                <a href="tel:0345920368" class="btn-call">Gọi ngay</a>
+                <a href="http://m.me/minhtanfitx" class="btn-message">Nhắn tin</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" webkit-playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+            <source src="assets/NỀN CHÍNH + X FIT.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">MINH TẤN FITX</h1>
+            <p class="hero-subtitle">  HLV VẬN ĐỘNG || HLV DINH DƯỠNG || HLV PHONG CÁCH SỐNG</p>
+            <div class="cta-buttons">
+                <button class="cta-button" onclick="scrollToSection('contact')">BẮT ĐẦU NGAY</button>
+                <button class="cta-button secondary" onclick="scrollToSection('services')">XEM DỊCH VỤ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title fade-in">VỀ TÔI</h2>
+        <div class="about-content">
+            <div class="about-image fade-in">
+                <img src="assets/mrTan_phong.png" alt="Huấn luyện viên" class="coach-photo">
+            </div>
+            <div class="about-text fade-in">
+                <h3>COACH NGUYỄN MINH TẤN</h3>
+                <p>Xin chào, tôi là Nguyễn Minh Tấn – Huấn luyện viên thuộc hệ thống chăm sóc sức khoẻ chủ động FITX.</p>
+                <p>Tôi cùng đội ngũ FITX xây dựng một môi trường rèn luyện toàn diện, nơi bạn được chăm sóc thể chất – dinh dưỡng – tinh thần một cách khoa học, cá nhân hoá và bền vững.</p>
+                <p>Chúng tôi cam kết đồng hành cùng bạn trên hành trình chinh phục mục tiêu sức khoẻ, vóc dáng và năng lượng sống tích cực mỗi ngày.</p>
+                <p>Hãy để tôi giúp bạn đạt được phiên bản tốt nhất của chính mình!</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Học viên</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Phòng tập FitX</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Đạt kết quả</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CÁC BỘ MÔN LUYỆN TẬP -->
+        <div class="training-programs fade-in">
+            <h3 class="programs-title">CÁC BỘ MÔN LUYỆN TẬP</h3>
+            
+            <!-- X-FIT -->
+            <div class="program-card fade-in">
+                <video class="program-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/NỀN CHÍNH + X FIT.mp4" type="video/mp4">
+                </video>
+                <div class="program-overlay"></div>
+                <div class="program-content">
+                    <div class="program-icon"></div>
+                    <h4>X-FIT</h4>
+                    <p>Kháng lực, Cardio, tăng sức mạnh, định hình vóc dáng săn chắc, nâng cao thể lực.</p>
+                </div>
+            </div>
+
+            <!-- X-STEP -->
+            <div class="program-card fade-in">
+                <video class="program-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/X STEP - NHẢY BỤC.mp4" type="video/mp4">
+                </video>
+                <div class="program-overlay"></div>
+                <div class="program-content">
+                    <div class="program-icon"></div>
+                    <h4>X-STEP</h4>
+                    <p>Nhảy bục, đốt năng lượng đỉnh cao, vui khỏe, giải tỏa tinh thần.</p>
+                </div>
+            </div>
+
+            <!-- X-BALANCE -->
+            <div class="program-card fade-in">
+                <video class="program-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="assets/X BALANCE2.mp4" type="video/mp4">
+                </video>
+                <div class="program-overlay"></div>
+                <div class="program-content">
+                    <div class="program-icon"></div>
+                    <h4>X-BALANCE</h4>
+                    <p>Cân bằng hệ trục, cân chỉnh vóc dáng, cải thiện hình thể, khắc phục những vấn đề cơ xương khớp, cân bằng chuyển hóa bên trong cơ thể.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <h2 class="section-title fade-in">HÌNH THỨC LUYỆN TẬP</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">🏋️</div>
+                <h3>Huấn luyện cá nhân 1-1</h3>
+                <p>Chương trình tập luyện được thiết kế riêng cho bạn, phù hợp với mục tiêu và thể trạng hiện tại. Theo dõi tiến độ chi tiết và điều chỉnh linh hoạt.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">👥</div>
+                <h3>TẬP LUYỆN NHÓM NHỎ</h3>
+                <p>Không khí sôi động, tạo động lực tập luyện cùng nhóm. Phù hợp cho người mới bắt đầu đến nâng cao với nhiều mức độ khác nhau.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">📱</div>
+                <h3>Huấn luyện Online</h3>
+                <p>Tập luyện linh hoạt mọi lúc mọi nơi với video hướng dẫn chi tiết. Chat trực tiếp để giải đáp thắc mắc và theo dõi tiến độ.</p>
+            </div>
+            
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <h2 class="section-title fade-in">HỌC VIÊN NÓI GÌ</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    "Thứ hai nữa là chị tập vào đây với mọi người gắn kết rất là vui vẻ, tình cảm, cái nó như là ngôi nhà thứ hai của chị luôn. Tại vì là chị rất là xa, nhưng mà bao nhiêu lần chị đã định dừng để về đấy tập, nhưng vì tình cảm của mọi người ở đây nên chị rất cố gắng. Nhiều hôm chị rất là ngại đi, nhưng chị bảo thôi, đến đây vui vẻ, có mọi người là chị tập một ca là hết mệt mỏi luôn. Mà từ khi chị tập ở đây, sức khỏe của chị lên rất nhiều, thể lực của chị lên trông thấy luôn."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👩</div>
+                    <div class="author-info">
+                        <h4>Chị Sen</h4>
+                        <p>Học viên FitX-06</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⭐ VIDEO TESTIMONIAL 1 ⭐ -->
+            <div class="testimonial-video fade-in">
+                <video controls poster="assets/img_chi_sen.png">
+                    <source src="assets/CHI_SEN.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    "Chị đã tập rất là nhiều nơi rồi, đóng tiền năm một năm một nhưng mà tập vài buổi là bỏ; và chị cũng không nghĩ là chị được tập ở đây đến tận hôm nay, là gần một năm trời rồi. Và tập ở đây cảm giác là càng ngày càng thấy khỏe người, cảm thấy mình khỏe khoắn và xinh đẹp hơn, cảm thấy cuộc sống có nhiều năng lượng tích cực hơn. Cảm ơn FITX06 nha!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👩</div>
+                    <div class="author-info">
+                        <h4>Chị Hà</h4>
+                        <p>Học viên FitX-06</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⭐ VIDEO TESTIMONIAL 2 ⭐ -->
+            <div class="testimonial-video fade-in">
+                <video controls poster="assets/img_chi_Ha.png">
+                    <source src="assets/FB_C_HÀ.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">
+                    "Chị ấy cũng tập nhiều môn lắm, tại vì chị bị đau người ấy. Ừ, chị bị mỏi cơ nên cũng tìm mọi cách để xem môn nào hợp để thay đổi. Nhưng mà sang cái môn này thì chị thấy rất là hợp, theo kiểu tinh thần của mình vui vẻ hơn, mà ai cũng khen chị trẻ hơn nhé — không nói nhỏ, còn khen xinh nữa cơ."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👩</div>
+                    <div class="author-info">
+                        <h4>Chị Thắng</h4>
+                        <p>Học viên FitX-06</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⭐ VIDEO TESTIMONIAL 3 ⭐ -->
+            <div class="testimonial-video fade-in">
+                <video controls poster="assets/img_chị_thắng.png">
+                    <source src="assets/FB_C_Thắng.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⭐ TRANSFORMATION IMAGE ⭐ -->
+        <div class="transformation-section fade-in">
+            <h3 class="transformation-title">HÀNH TRÌNH THAY ĐỔI ĐÁNG KINH NGẠC</h3>
+            <div class="transformation-card">
+                <div class="transformation-image">
+                    <img src="assets/GIẢM_42KG.jpg" alt="Giảm 42kg" class="transform-photo">
+                    <div class="transformation-badge">
+                        <span class="badge-number">-42KG</span>
+                        <span class="badge-text">4 THÁNG</span>
+                    </div>
+                </div>
+                <div class="transformation-content">
+                    <h4>Từ 105 kg xuống 63kg trong 4 tháng</h4>
+                    <p>"Tôi không tin là mình có thể làm được điều này! Coach đã thay đổi hoàn toàn cuộc sống của tôi. Từ một người béo phì, mất tự tin, giờ tôi đã lấy lại được vóc dáng và sức khỏe. Cảm ơn coach rất nhiều!"</p>
+                    <div class="transformation-author">
+                        <div class="author-avatar">👩</div>
+                        <div class="author-info">
+                            <h4>Hội viên Thu Hương</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <h2 class="section-title fade-in">LIÊN HỆ VỚI TÔI</h2>
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h3>Thông tin liên hệ</h3>
+                <div class="contact-methods">
+                    <div class="contact-method" onclick="window.open('tel:0345920368')">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Hotline</h4>
+                        <p>0345.920.368</p>
+                    </div>
+                </div>
+                <div class="contact-method" onclick="window.open('mailto:minhtanfitx@gmail.com')">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>minhtanfitx@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-method" onclick="window.open('http://m.me/minhtanfitx', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Facebook Messenger</h4>
+                        <p>Chat trực tiếp qua Facebook</p>
+                    </div>
+                </div>
+                <div class="contact-method" onclick="window.open('https://zalo.me/0345920368', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Zalo</h4>
+                        <p>Chat trực tiếp qua Zalo</p>
+                    </div>
+                </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Địa chỉ</h4>
+                            <a href="https://www.google.com/maps/place/K2+The+K+Park/@20.9587422,105.7644747,17z/data=!3m1!4b1!4m6!3m5!1s0x313453c6ac7dd3eb:0x26b544249802696a!8m2!3d20.9587372!4d105.7670496!16s%2Fg%2F11h_x8z55s?hl=vi&entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <p>Tầng 25, Toà K2, Chung cư Kpark, KĐT Văn Phú, Hà Đông, Hà Nội</p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container fade-in">
+                <form class="contact-form" id="contactForm" onsubmit="sendToMessenger(event)">
+                <div class="form-group">
+                    <input type="text" id="userName" placeholder="Họ và tên *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="userEmail" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="userPhone" placeholder="Số điện thoại *" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="userMessage" placeholder="Mục tiêu của bạn là gì? (Giảm cân, tăng cơ, cải thiện sức khỏe...)" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">GỬI TIN NHẮN</button>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <h2 class="fade-in">KẾT NỐI VỚI TÔI</h2>
+        <p class="fade-in">Theo dõi hành trình fitness và nhận tips hữu ích mỗi ngày</p>
+        <div class="social-links fade-in">
+            <!-- ⭐ CẬP NHẬT LINK MẠNG XÃ HỘI Ở ĐÂY ⭐ -->
+            <a href="https://www.facebook.com/minhtanfitx" target="_blank" class="social-link" title="Facebook">
+                <span>
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+            <a href="https://www.youtube.com/@minhtanfitx" target="_blank" class="social-link" title="YouTube">
+                <span>
+                    <i class="fab fa-youtube"></i>
+                </span>
+            </a>
+            <a href="https://zalo.me/0345.920.368" target="_blank" class="social-link" title="Zalo">
+                <span>
+                    <i class="fas fa-comment-dots"></i>
+                </span>
+            </a>
+            <a href="https://lephiha.github.io/website_fitX-06/" target="_blank" class="social-link" title="Instagram">
+                <span>
+                    <i class="fas fa-globe"></i>
+                </span>
+            </a>
+            <a href="https://tiktok.com/@yourpage" target="_blank" class="social-link" title="TikTok">
+                <span>
+                    <i class="fab fa-tiktok"></i>
+                </span>
+            </a>
+           
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 FitX-06 Coach Portfolio by LPH. All rights reserved.</p>
+        <p style="margin-top: 10px; color: #555;">Made with 💪 and ❤️</p>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        ✅ Tin nhắn đã được gửi thành công!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
