@@ -114,7 +114,7 @@ if (heroVideo) {
 }
 
 // ==========================================
-// CONTACT FORM - SEND TO ZALO
+// CONTACT FORM - SEND VIA GMAIL WEB
 // ==========================================
 function sendToEmail(event) {
     event.preventDefault();
@@ -125,33 +125,29 @@ function sendToEmail(event) {
     const phone = document.getElementById('userPhone').value;
     const message = document.getElementById('userMessage').value;
     
-    // Tạo tin nhắn
-    const zaloMessage = 
-        'ĐĂNG KÝ TẬP LUYỆN\n\n' +
-        '👤 Họ tên: ' + name + '\n' +
-        '📧 Email: ' + email + '\n' +
-        '📞 SĐT: ' + phone + '\n' +
-        '🎯 Mục tiêu: ' + message;
+    // Tạo nội dung email
+    const subject = encodeURIComponent('Đăng ký tập luyện - ' + name);
+    const body = encodeURIComponent(
+        'Họ và tên: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Số điện thoại: ' + phone + '\n' +
+        'Mục tiêu: ' + message
+    );
     
-    const encodedMessage = encodeURIComponent(zaloMessage);
-    
-    
-    const zaloUrl = `https://zalo.me/84345920368?text=${encodedMessage}`;
+    // Gmail web compose URL
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=minhtanfitx@gmail.com&su=' + subject + '&body=' + body;
     
     // Show success message
     const successMessage = document.getElementById('successMessage');
-    successMessage.textContent = '✅ Đang chuyển đến Zalo...';
+    successMessage.textContent = '✅ Đang chuyển đến Gmail...';
     successMessage.classList.add('show');
     
-    // Mở Zalo
-    setTimeout(() => {
-        window.location.href = zaloUrl; 
-        
-        // Reset sau 2s
-        setTimeout(() => {
-            successMessage.classList.remove('show');
-            document.getElementById('contactForm').reset();
-        }, 2000);
+    // Mở Gmail web
+    setTimeout(function() {
+        window.open(gmailUrl, '_blank');
+        successMessage.classList.remove('show');
+        // Reset form
+        document.getElementById('contactForm').reset();
     }, 1000);
 }
 
