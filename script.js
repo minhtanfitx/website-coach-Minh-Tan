@@ -114,7 +114,7 @@ if (heroVideo) {
 }
 
 // ==========================================
-// CONTACT FORM - SEND TO EMAIL
+// CONTACT FORM - SEND TO ZALO
 // ==========================================
 function sendToEmail(event) {
     event.preventDefault();
@@ -125,30 +125,32 @@ function sendToEmail(event) {
     const phone = document.getElementById('userPhone').value;
     const message = document.getElementById('userMessage').value;
     
-    // Tạo nội dung email
-    const subject = encodeURIComponent('Đăng ký tập luyện - ' + name);
-    const body = encodeURIComponent(
-        'Họ và tên: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Số điện thoại: ' + phone + '\n' +
-        'Mục tiêu: ' + message
-    );
+    // Tạo tin nhắn Zalo
+    const zaloMessage = 
+        'ĐĂNG KÝ TẬP LUYỆN\n\n' +
+        '👤 Họ tên: ' + name + '\n' +
+        '📧 Email: ' + email + '\n' +
+        '📞 SĐT: ' + phone + '\n' +
+        '🎯 Mục tiêu: ' + message;
     
-    // Tạo mailto link
-    const mailtoLink = 'mailto:minhtanfitx@gmail.com?subject=' + subject + '&body=' + body;
+    // Encode message
+    const encodedMessage = encodeURIComponent(zaloMessage);
+    
+    // Zalo URL
+    const zaloUrl = 'https://zalo.me/0345920368?text=' + encodedMessage;
     
     // Show success message
     const successMessage = document.getElementById('successMessage');
-    successMessage.textContent = '✅ Đang mở ứng dụng email...';
+    successMessage.textContent = '✅ Đang chuyển đến Zalo...';
     successMessage.classList.add('show');
     
-    // Mở email client
+    // Mở Zalo
     setTimeout(function() {
-        window.location.href = mailtoLink;
+        window.open(zaloUrl, '_blank');
         successMessage.classList.remove('show');
         // Reset form
         document.getElementById('contactForm').reset();
-    }, 500);
+    }, 1000);
 }
 
 // ==========================================
