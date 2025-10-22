@@ -125,7 +125,7 @@ function sendToEmail(event) {
     const phone = document.getElementById('userPhone').value;
     const message = document.getElementById('userMessage').value;
     
-    // Tạo tin nhắn Zalo
+    // Tạo tin nhắn
     const zaloMessage = 
         'ĐĂNG KÝ TẬP LUYỆN\n\n' +
         '👤 Họ tên: ' + name + '\n' +
@@ -133,11 +133,10 @@ function sendToEmail(event) {
         '📞 SĐT: ' + phone + '\n' +
         '🎯 Mục tiêu: ' + message;
     
-    // Encode message
     const encodedMessage = encodeURIComponent(zaloMessage);
     
-    // Zalo URL
-    const zaloUrl = 'https://zalo.me/0345920368?text=' + encodedMessage;
+    
+    const zaloUrl = `https://zalo.me/84345920368?text=${encodedMessage}`;
     
     // Show success message
     const successMessage = document.getElementById('successMessage');
@@ -145,11 +144,14 @@ function sendToEmail(event) {
     successMessage.classList.add('show');
     
     // Mở Zalo
-    setTimeout(function() {
-        window.open(zaloUrl, '_blank');
-        successMessage.classList.remove('show');
-        // Reset form
-        document.getElementById('contactForm').reset();
+    setTimeout(() => {
+        window.location.href = zaloUrl; 
+        
+        // Reset sau 2s
+        setTimeout(() => {
+            successMessage.classList.remove('show');
+            document.getElementById('contactForm').reset();
+        }, 2000);
     }, 1000);
 }
 
