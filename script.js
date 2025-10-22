@@ -133,20 +133,22 @@ function sendToEmail(event) {
         '🎯 Mục tiêu: ' + message
     );
     
-    // Gmail compose URL
-    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=minhtanfitx@gmail.com&su=' + subject + '&body=' + body;
+    
+    const mailtoUrl = `mailto:minhtanfitx@gmail.com?subject=${subject}&body=${body}`;
     
     // Show success message
     const successMessage = document.getElementById('successMessage');
-    successMessage.textContent = '✅ Đang chuyển đến Gmail...';
+    successMessage.textContent = '✅ Đang mở ứng dụng email...';
     successMessage.classList.add('show');
     
-    // Mở Gmail
-    setTimeout(function() {
-        window.open(gmailUrl, '_blank');
-        successMessage.classList.remove('show');
-        // Reset form
-        document.getElementById('contactForm').reset();
+    // Mở email client
+    setTimeout(() => {
+        window.location.href = mailtoUrl; 
+        
+        setTimeout(() => {
+            successMessage.classList.remove('show');
+            document.getElementById('contactForm').reset();
+        }, 2000);
     }, 1000);
 }
 
