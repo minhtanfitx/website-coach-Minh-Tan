@@ -124,7 +124,7 @@ function sendToEmail(event) {
     const phone = document.getElementById('userPhone').value;
     const message = document.getElementById('userMessage').value;
     
-    // Tạo subject và body
+    // Tạo nội dung email
     const subject = encodeURIComponent('Đăng ký tập luyện - ' + name);
     const body = encodeURIComponent(
         'THÔNG TIN ĐĂNG KÝ\n\n' +
@@ -133,17 +133,33 @@ function sendToEmail(event) {
         '🎯 Mục tiêu: ' + message
     );
     
+    // ✅ Gmail URL scheme cho mobile
+    const gmailMobileUrl = `googlegmail://co?to=minhtanfitx@gmail.com&subject=${subject}&body=${body}`;
     
-    const mailtoUrl = `mailto:minhtanfitx@gmail.com?subject=${subject}&body=${body}`;
+    // ✅ Gmail web URL cho desktop (fallback)
+    const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=minhtanfitx@gmail.com&su=${subject}&body=${body}`;
     
     // Show success message
     const successMessage = document.getElementById('successMessage');
-    successMessage.textContent = '✅ Đang mở ứng dụng email...';
+    successMessage.textContent = '✅ Đang mở Gmail...';
     successMessage.classList.add('show');
     
-    // Mở email client
     setTimeout(() => {
-        window.location.href = mailtoUrl; 
+        // ✅ Detect mobile và mở URL phù hợp
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Thử mở Gmail app
+            window.location.href = gmailMobileUrl;
+            
+            // Fallback: Nếu không có Gmail app, mở Gmail web sau 2s
+            setTimeout(() => {
+                window.open(gmailWebUrl, '_blank');
+            }, 2000);
+        } else {
+            // Desktop: Mở Gmail web
+            window.open(gmailWebUrl, '_blank');
+        }
         
         setTimeout(() => {
             successMessage.classList.remove('show');
@@ -151,7 +167,6 @@ function sendToEmail(event) {
         }, 2000);
     }, 1000);
 }
-
 // ==========================================
 // STATS COUNTER ANIMATION
 // ==========================================
