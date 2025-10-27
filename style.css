@@ -988,7 +988,7 @@ nav.scrolled {
 
 /* Contact Section */
 .contact {
-    background: var(--gray);
+    background: var(--dark);
 }
 
 .contact-container {
@@ -1099,7 +1099,7 @@ nav.scrolled {
 /* Social Section */
 .social-section {
     padding: 80px 50px;
-    background: #ffffff;
+    background: #888;
     text-align: center;
 }
 
